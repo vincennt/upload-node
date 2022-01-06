@@ -3,8 +3,8 @@ const app = express()
 const multer = require("multer")
 const fs = require("fs")
 
-// configurer multer en lui spécifiant dans quel dossier
-// on va upload nos images
+
+// Go public 
 const upload = multer({ dest: 'public' })
 
 app.post('/', upload.single('photo'), (req, res) => {
